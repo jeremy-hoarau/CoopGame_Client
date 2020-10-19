@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static Dictionary<int, SwitchManager> switches = new Dictionary<int, SwitchManager>();
     public static Dictionary<int, ElevatorManager> elevators = new Dictionary<int, ElevatorManager>();
     public static Dictionary<int, PlatformManager> platforms = new Dictionary<int, PlatformManager>();
+    public static Dictionary<int, SwapPlatformManager> swapPlatforms = new Dictionary<int, SwapPlatformManager>();
     public static Dictionary<int, BoxManager> boxes = new Dictionary<int, BoxManager>();
     
     public GameObject localPlayerPrefab;
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
         switches = new Dictionary<int, SwitchManager>();
         elevators = new Dictionary<int, ElevatorManager>();
         platforms = new Dictionary<int, PlatformManager>();
+        swapPlatforms = new Dictionary<int, SwapPlatformManager>();
         boxes = new Dictionary<int, BoxManager>();
     }
 

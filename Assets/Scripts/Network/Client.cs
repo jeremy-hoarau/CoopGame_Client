@@ -291,6 +291,7 @@ public class Client : MonoBehaviour
             {(int)ServerPackets.objectPosition, ClientHandle.ObjectPosition},
             {(int)ServerPackets.objectRotation, ClientHandle.ObjectRotation},
             {(int)ServerPackets.destroyObject, ClientHandle.DestroyObject},
+            {(int)ServerPackets.swapPlatformState, ClientHandle.SwapPlatformState},
         };
         Debug.Log("Initialized packets");
     }

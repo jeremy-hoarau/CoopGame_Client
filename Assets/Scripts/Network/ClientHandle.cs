@@ -156,6 +156,17 @@ public class ClientHandle : MonoBehaviour
         
         GameManager.DestroyObject(_objectType, _objectId);
     }
+
+    public static void SwapPlatformState(Packet _packet)
+    {
+        int _id = _packet.ReadInt();
+        bool _activated = _packet.ReadBool();
+
+        if (_activated)
+            GameManager.swapPlatforms[_id].Activate();
+        else
+            GameManager.swapPlatforms[_id].Deactivate();
+    }
     
     private static readonly Dictionary<int, ObjectType> objects = new Dictionary<int, ObjectType>()
     {

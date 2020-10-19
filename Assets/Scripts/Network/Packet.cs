@@ -21,7 +21,8 @@ public enum ServerPackets
     stopWaitingPlayers,
     objectPosition,
     objectRotation,
-    destroyObject
+    destroyObject,
+    swapPlatformState
 }
 
 /// <summary>Sent from client to server.</summary>
