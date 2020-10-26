@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1873396430194939691}
   - component: {fileID: 4595529216344451492}
   - component: {fileID: 4294631689851775187}
+  - component: {fileID: 994114398240005863}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: GrapplePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,6 +96,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &994114398240005863
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430462582384164378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8913610443050756878
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +122,7 @@ GameObject:
   - component: {fileID: 243479322320345883}
   - component: {fileID: 1992844436633471688}
   m_Layer: 0
-  m_Name: Grapple_Platform
+  m_Name: Grapple_Platform_client
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

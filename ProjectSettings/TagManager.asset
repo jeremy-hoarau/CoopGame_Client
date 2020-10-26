@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UI_Settings
   - UI_MainMenu
+  - GrapplePoint
   layers:
   - Default
   - TransparentFX
