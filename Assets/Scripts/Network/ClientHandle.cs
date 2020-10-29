@@ -95,7 +95,7 @@ public class ClientHandle : MonoBehaviour
     public static void RotatePlayer(Packet _packet)
     {
         Quaternion _rotation = _packet.ReadQuaternion();
-        
+
         GameManager.players[Client.instance.myId].gameObject.transform.rotation = _rotation;
     }
     

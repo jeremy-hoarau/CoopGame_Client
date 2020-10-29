@@ -71,52 +71,66 @@ public class GameManager : MonoBehaviour
 
     public static void UpdateObjectPosition(ObjectType _objectType, int _objectId, Vector3 _objectPosition)
     {
-        switch (_objectType)
+        try
         {
-            case (ObjectType.button):
-                buttons[_objectId].transform.position = _objectPosition;
-                break;
-            case (ObjectType.door):
-                doors[_objectId].transform.position = _objectPosition;
-                break;
-            case (ObjectType.switch_):
-                switches[_objectId].transform.position = _objectPosition;
-                break;
-            case (ObjectType.elevator):
-                elevators[_objectId].position = _objectPosition; // *
-                break;
-            case (ObjectType.platform):
-                platforms[_objectId].position = _objectPosition; // *
-                break;
-            case (ObjectType.box):
-                boxes[_objectId].position = _objectPosition; // *
-                break;
+            switch (_objectType)
+            {
+                case (ObjectType.button):
+                    buttons[_objectId].transform.position = _objectPosition;
+                    break;
+                case (ObjectType.door):
+                    doors[_objectId].transform.position = _objectPosition;
+                    break;
+                case (ObjectType.switch_):
+                    switches[_objectId].transform.position = _objectPosition;
+                    break;
+                case (ObjectType.elevator):
+                    elevators[_objectId].position = _objectPosition; // *
+                    break;
+                case (ObjectType.platform):
+                    platforms[_objectId].position = _objectPosition; // *
+                    break;
+                case (ObjectType.box):
+                    boxes[_objectId].position = _objectPosition; // *
+                    break;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log($"The object of type '{_objectType}' with the ID '{_objectId}' couldn't be found in the dictionary.");
         }
     }
     // * = Update the field position and not the transform to use it later in the FixedUpdate to avoid jitters for objects moving with the player
     
     public static void UpdateObjectRotation(ObjectType _objectType, int _objectId, Quaternion _objectRotation)
     {
-        switch (_objectType)
+        try
         {
-            case (ObjectType.button):
-                buttons[_objectId].transform.rotation = _objectRotation;
-                break;
-            case (ObjectType.door):
-                doors[_objectId].transform.rotation = _objectRotation;
-                break;
-            case (ObjectType.switch_):
-                switches[_objectId].transform.rotation = _objectRotation;
-                break;
-            case (ObjectType.elevator):
-                elevators[_objectId].rotation = _objectRotation;  // **
-                break;
-            case (ObjectType.platform):
-                platforms[_objectId].rotation = _objectRotation;  // **
-                break;
-            case (ObjectType.box):
-                boxes[_objectId].rotation = _objectRotation; // **
-                break;
+            switch (_objectType)
+            {
+                case (ObjectType.button):
+                    buttons[_objectId].transform.rotation = _objectRotation;
+                    break;
+                case (ObjectType.door):
+                    doors[_objectId].transform.rotation = _objectRotation;
+                    break;
+                case (ObjectType.switch_):
+                    switches[_objectId].transform.rotation = _objectRotation;
+                    break;
+                case (ObjectType.elevator):
+                    elevators[_objectId].rotation = _objectRotation;  // **
+                    break;
+                case (ObjectType.platform):
+                    platforms[_objectId].rotation = _objectRotation;  // **
+                    break;
+                case (ObjectType.box):
+                    boxes[_objectId].rotation = _objectRotation; // **
+                    break;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log($"The object of type '{_objectType}' with the ID '{_objectId}' couldn't be found in the dictionary.");
         }
     }
     // ** = Update the field rotation and not the transform to use it later in the FixedUpdate to avoid jitters for objects moving with the player
